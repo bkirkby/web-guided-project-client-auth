@@ -18,6 +18,12 @@ class Login extends React.Component {
     });
   };
 
+  /*
+    1. connect to server with username/passowrd
+    2. store the token that gets passed on successful login
+    3. output an error when we have an unsuccessful login
+  */
+
   login = e => {
     e.preventDefault();
     // login to server
