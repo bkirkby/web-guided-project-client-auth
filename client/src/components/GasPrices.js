@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Loader from 'react-loader-spinner';
+import axios from 'axios';
 
 class GasPrices extends React.Component {
   state = {
@@ -13,6 +14,7 @@ class GasPrices extends React.Component {
 
   getData = () => {
     // call api to get data
+    // axios.get("http://localhost:5000/api/data") ???
   };
 
   formatData = () => {
