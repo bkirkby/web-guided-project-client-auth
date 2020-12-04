@@ -31,6 +31,7 @@ class Login extends React.Component {
       .then(res => {
         console.log('bk: Login.js: login: res: ', res)
         localStorage.setItem('token', res.data.payload)
+        this.props.history.push('/protected')
       })
       .catch(err => {
         console.error(err.response)
