@@ -11,7 +11,9 @@ class GasPrices extends React.Component {
     this.getData();
   }
 
-  getData = () => {};
+  getData = () => {
+    // call api to get data
+  };
 
   formatData = () => {
     const formattedData = [];
