@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
 /*
   1. it has the same interface a Route
@@ -9,7 +9,13 @@ import { Route } from 'react-router-dom';
   4. if the user dos not have an authentication token, it redirects to /login
 */
 const PrivateRoute = ({ component: Component, ...props }) => {
-  return <Route {...props} />
+  return <Route {...props} render={() => {
+    // logic for checking if we have an auth token
+    if (localStorage.getItem('token')) {
+      return <Component />
+    }
+    return <Redirect to="/login" />
+  }} />
 }
 
 export default PrivateRoute;
