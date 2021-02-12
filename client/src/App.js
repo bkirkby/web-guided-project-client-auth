@@ -31,7 +31,8 @@ function App() {
               <li>
                 <Link to="/protected">Protected Page</Link>
               </li>
-            </>}
+            </>
+          }
         </ul>
         <Switch>
           <PrivateRoute exact path="/protected" component={GasPrices} />
