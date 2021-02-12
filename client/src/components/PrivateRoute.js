@@ -7,8 +7,10 @@ import { Route } from 'react-router-dom';
    4. if have a token, 2. will render GasPrices retrieve data
 */
 
-const PrivateRoute = props => {
-  return <Route {...props} />
+const PrivateRoute = ({ component: Component, ...theRest }) => {
+  return <Route {...theRest} render={(props) => {
+
+  }} />
 }
 
 export default PrivateRoute;
