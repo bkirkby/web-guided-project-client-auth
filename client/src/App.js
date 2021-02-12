@@ -10,6 +10,7 @@ function App() {
   const logout = () => {
     axiosWithAuth().post('/logout')
       .catch(err => console.error("unable to logout"));
+    localStorage.removeItem('token')
   };
 
 
