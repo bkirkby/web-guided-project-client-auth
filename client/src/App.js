@@ -8,7 +8,8 @@ import { axiosWithAuth } from './utils/axiosWithAuth';
 
 function App() {
   const logout = () => {
-    axiosWithAuth().post('/logout');
+    axiosWithAuth().post('/logout')
+      .catch(err => console.error("unable to logout"));
   };
 
 
