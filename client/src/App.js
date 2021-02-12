@@ -23,13 +23,16 @@ function App() {
           <li>
             <Link to="/login">Login</Link>
           </li>
-          <li>
-            <Link to="/login" onClick={logout}>Logout</Link>
-          </li>
-          <li>
-            <Link to="/protected">Protected Page</Link>
-          </li>
-        </ul>
+          {localStorage.getItem('token') &&
+            <>
+              <li>
+                <Link to="/login" onClick={logout}>Logout</Link>
+              </li>
+              <li>
+                <Link to="/protected">Protected Page</Link>
+              </li>
+            </ul>
+        </>}
         <Switch>
           <PrivateRoute exact path="/protected" component={GasPrices} />
           <Route path="/login" component={Login} />
