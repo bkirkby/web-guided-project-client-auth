@@ -31,7 +31,7 @@ function App() {
           </li>
         </ul>
         <Switch>
-          <Route exact path="/protected" component={GasPrices} />
+          <PrivateRoute exact path="/protected" component={GasPrices} />
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>
