@@ -24,6 +24,7 @@ class Login extends React.Component {
       .then(res => {
         console.log(`bk: Login.sj: login: res: `, res)
         localStorage('token', res.data.payload)
+        this.props.history.push('/protected')
       })
       .catch(err => console.error(`unable to login user: `, err.message))
   };
