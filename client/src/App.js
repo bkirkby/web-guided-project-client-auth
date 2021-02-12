@@ -6,6 +6,8 @@ import GasPrices from './components/GasPrices';
 
 import { axiosWithAuth } from './utils/axiosWithAuth';
 
+import PrivateRoute from './components/PrivateRoute';
+
 function App() {
   const logout = () => {
     axiosWithAuth().post('/logout')
