@@ -21,7 +21,10 @@ class Login extends React.Component {
   login = e => {
     e.preventDefault();
     axios.post('http://localhost:5000/api/login', this.state.credentials)
-      .then(res => console.log("bk: Login.js: login: res: ", res))
+      .then(res => {
+        console.log("bk: Login.js: login: res: ", res)
+        // ????????
+      })
       .catch(err => console.error("cannot login to server: ", err.message));
   };
 
