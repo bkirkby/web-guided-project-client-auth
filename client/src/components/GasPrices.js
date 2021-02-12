@@ -13,7 +13,7 @@ class GasPrices extends React.Component {
   }
 
   getData = () => {
-    axios.get('/api/data')
+    axios.get('http://localhost:5000/api/data')
       .then(res => console.log('bk: GasPrices: getData: res: ', res))
       .catch(err => console.error('unable to get data: ', err.message))
   };
