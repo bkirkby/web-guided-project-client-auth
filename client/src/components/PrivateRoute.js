@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
 /* 1. same interface (API) as Route
    2. render a <Route /> passing all the properties it was passed to it
@@ -9,7 +9,11 @@ import { Route } from 'react-router-dom';
 
 const PrivateRoute = ({ component: Component, ...theRest }) => {
   return <Route {...theRest} render={(props) => {
-
+    if (localStorage.getItem('token')) {
+      return <Component {...props} />
+    } else {
+      return <Redirect to="/login"
+    }
   }} />
 }
 
