@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 /* 1. same interface (API) as Route
    2. render a <Route /> passing all the properties it was passed to it
@@ -7,7 +7,7 @@ import { Route } 'react-router-dom';
    4. if have a token, 2. will render GasPrices retrieve data
 */
 
-const PriveRoute = props => {
+const PrivateRoute = props => {
 
 }
 
